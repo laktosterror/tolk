@@ -1,0 +1,19 @@
+name: tolk
+version: 0.1.0
+
+authors:
+    - laktosterror <55037659+laktosterror@users.noreply.github.com>
+
+dependencies:
+    kemal:
+        github: kemalcr/kemal
+    crest:
+        github: mamantoha/crest
+
+targets:
+    tolk:
+        main: src/tolk.cr
+
+crystal: ">= 1.19.1"
+
+license: MIT
