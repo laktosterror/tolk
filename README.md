@@ -1,10 +1,9 @@
 # tolk
 
-TODO: Write a description here
+TODO: 
+[x] Implement basic post -> post
+[] Implement basic post -> ampq
 
-## Installation
-
-TODO: Write installation instructions here
 
 ## Usage
 
