@@ -2,7 +2,7 @@
 
 TODO: 
 - [x] Implement basic post -> post
-- [] Implement basic post -> ampq
+- [ ] Implement basic post -> ampq
 
 
 ## Usage
