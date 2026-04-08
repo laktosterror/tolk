@@ -1,8 +1,8 @@
 # tolk
 
 TODO: 
-[x] Implement basic post -> post
-[] Implement basic post -> ampq
+- [x] Implement basic post -> post
+- [] Implement basic post -> ampq
 
 
 ## Usage
