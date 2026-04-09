@@ -14,8 +14,8 @@
         },
         "initCommands": [
             // fixes debug variables strings and arrays not showing
-            // https://github.com/crystal-lang/crystal/blob/master/etc/lldb/crystal_formatters.py 
-            "command script import $ZED_WORKTREE_ROOT/crystal_formatters.py",
+            // https://github.com/crystal-lang/crystal/blob/master/etc/lldb/crystal_formatters.py
+            "command script import crystal_formatters.py",
         ],
     },
 ]
