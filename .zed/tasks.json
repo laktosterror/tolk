@@ -1,0 +1,10 @@
+[
+    {
+        "label": "crystal: build current file (debug)",
+        "command": "shards build --debug",
+    },
+    {
+        "label": "crystal: run current file (debug)",
+        "command": "shards run --debug",
+    },
+]

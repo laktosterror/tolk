@@ -1,0 +1,21 @@
+[
+    {
+        "adapter": "CodeLLDB",
+        "label": "crystal: debug tolk (CodeLLDB)",
+        "request": "launch",
+        "name": "tolk (CodeLLDB)",
+        "program": "bin/tolk",
+        "stopOnEntry": false,
+        "cwd": "$ZED_WORKTREE_ROOT",
+        "env": { "NTFY_TOPIC": "test" },
+        "build": {
+            "command": "shards",
+            "args": ["build", "--debug"],
+        },
+        "initCommands": [
+            // fixes debug variables strings and arrays not showing
+            // https://github.com/crystal-lang/crystal/blob/master/etc/lldb/crystal_formatters.py 
+            "command script import $ZED_WORKTREE_ROOT/crystal_formatters.py",
+        ],
+    },
+]
