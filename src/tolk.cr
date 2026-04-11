@@ -1,13 +1,13 @@
 require "kemal"
 require "./handlers/endpoint_handlers.cr"
 
-NTFY_TOPIC = ENV["NTFY_TOPIC"]
-
 handlers = EndpointHandlers.new
 
-post "/webhook" do |env|
-  message = env.request.body.try(&.gets_to_end) || ""
-  handlers.handle_webhook(message)
+post "/httppost" do |env|
+  handlers.handle_httppost(env.request)
+rescue e : MissingHeaderError
+  Log.error { "tolk: #{e.message}" }
+  halt env, status_code: 400, response: e.message.to_s
 end
 
 get "/health" do
