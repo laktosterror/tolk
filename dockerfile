@@ -1,4 +1,4 @@
- FROM crystallang/crystal:latest-alpine AS builder
+FROM crystallang/crystal:latest-alpine AS builder
 
 WORKDIR /app
 
@@ -7,13 +7,9 @@ RUN shards install --production
 
 COPY src/ ./src/
 
-RUN crystal build src/tolk.cr \
-      --release \
-      --static \
-      --no-debug \
-      -o bin/tolk
+RUN shards build --production --release --static --no-debug
 
- 
+
 FROM scratch
 
 COPY --from=builder /app/bin/tolk /tolk
