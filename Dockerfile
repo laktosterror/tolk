@@ -1,5 +1,6 @@
 FROM crystallang/crystal:latest-alpine AS builder
 
+RUN crystal version
 WORKDIR /app
 COPY shard.yml shard.lock ./
 RUN shards install --production
